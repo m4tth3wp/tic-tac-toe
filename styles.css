@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+}
+
+.top-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+}
+
+#player-one {
+    padding: 10px;
+}
+
+.messages {
+    padding: 10px;
+}
+
+#player-two {
+    padding: 10px;
+}
+
+.game-board {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: aqua;
+    justify-content: center;
+}
+
+.vertical {
+    border-left: 2px solid black;
+}
+
+.horizontal {
+    border-bottom: 2px solid black;
+}
