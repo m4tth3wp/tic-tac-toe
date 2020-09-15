@@ -1,0 +1,8 @@
+1. as a user, I want to be aware who's turn it is to make a selection
+
+2. As a user, I want to be able to make a selection on the game board
+
+3. as a user, I want to know who wins
+
+4. as a user, I want to reset the game with a reset button
+
