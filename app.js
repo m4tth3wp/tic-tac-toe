@@ -1,20 +1,22 @@
 console.log('app.js is connected!')
 
 // Variables list
-let choice = document.getElementById('top-left')
+let choice = document.getElementById('1')
 
 // Player name cached
 let playerOne = document.getElementById('player-one')
 let playerTwo = document.getElementById('player-two')
 
+// Winning Message 
+let messageBox = document.getElementById('messages')
 // array for choices
 const answers = []
 
 choice.addEventListener('click', function(e) {
     e.preventDefault()
-    choice.textContent = 'X'
+    e.target.textContent = 'X'
     answers.push(choice)
-    console.log(answers)
+    console.log(e)
 })
 
 // Highlights a player's name to indicate it is their turn
