@@ -1,5 +1,17 @@
+body {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "title title title title title"
+        "info info info info info"
+        ". . board board .";
+}
+
 h1 {
     text-align: center;
+    grid-area: title;
+
 }
 
 .top-info {
@@ -7,6 +19,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     margin: 10px;
+    grid-area: info;
 }
 
 #player-one {
@@ -23,12 +36,13 @@ h1 {
 
 .game-board {
     display: grid;
+    grid-area: board;
     background-color: black;
-    width: 500px;
+    width: 400px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px;
     font-size: 64px;
-    grid-gap: 10px
+    grid-gap: 10px;
 
 }
 
