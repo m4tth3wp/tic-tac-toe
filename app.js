@@ -20,12 +20,12 @@ const answers = []
 let playerOne = document.getElementById('player-one')
 let playerTwo = document.getElementById('player-two')
 let messageBox = document.getElementById('messages')
-let choice = document.getElementById('1')
+const cellChoices = document.querySelectorAll('.boxes')
 
 
 // *******Event listeners***********
 
-choice.addEventListener('click', pushChoice)
+//cellChoices.addEventListener('click', pushChoice)
 
 
 // ******FUNCTIONS******
@@ -34,7 +34,7 @@ choice.addEventListener('click', pushChoice)
 const pushChoice = (e) => {
     e.preventDefault()
     e.target.textContent = 'X'
-    answers.push(choice)
+    answers.push(cellChoices)
     console.log(e)
 }
 
@@ -45,9 +45,9 @@ const playerHighlight = (player1, player2) => {
 }
 
 //clears game board
-const clearBoard = (choice) => {
-    for (let choices = 0; choice.textContent; choices++) {
-        choice.innerHTML = ''
+const clearBoard = (cellChoices) => {
+    for (let cellChoices = 0; choice.textContent; cellChoices++) {
+        cellChoices.innerHTML = ''
     }
 }
 
