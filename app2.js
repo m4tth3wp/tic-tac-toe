@@ -27,7 +27,7 @@ let resetGame = document.getElementById('reset-game')
 
 /*----- event listeners -----*/
 cellElements.forEach(function(cell) {
-    cell.addEventListener('click', handleClick)
+    cell.addEventListener('click', handleClick, {once: true})
 })
 resetGame.addEventListener('click', clearBoard)
 
@@ -40,6 +40,7 @@ function handleClick(e) {
     e.preventDefault()
     placeChoice(cell, playerTurn)
     // check for win
+    winnerCheck()
     // check for draw 
     // switch turns
     switchTurns(playerTurn)
@@ -68,9 +69,37 @@ let switchTurns = function() {
    }
 }
 
+function boardArray() {
+    let positions = Array.from(cellElements)
+    console.log(positions)
+}
+
+function winnerCheck() {
+    let winner = false
+    let positions = Array.from(cellElements)
+    winningArrays.forEach(function(winner) {
+        const pos0InnterText = positions[winner[0]].innerText
+        const pos1InnterText = positions[winner[1]].innerText
+        const pos2InnterText = positions[winner[2]].innerText
+        const isWinningCombo = pos0InnterText !== '' && pos0InnterText === pos1InnterText && pos1InnterText === pos2InnterText
+    
+    if (isWinningCombo) {
+        let winner = true
+        messageBox.textContent = 'Player 1 is the Winner!'
+        cellElements.forEach(function(cell) {
+            cell.removeEventListener('click', handleClick, {once: true})
+        })
+    }
+    }) 
+}
+
 function clearBoard(e) {
     e.preventDefault()
     cellElements.forEach(function(cell) {
         cell.innerHTML = ' '
+        cell.classList.remove('X')
+        cell.classList.remove('O')
+        playerOne.style.backgroundColor = 'white'
+        playerTwo.style.backgroundColor = 'white'
     })
 }
