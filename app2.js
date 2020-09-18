@@ -27,7 +27,7 @@ let resetGame = document.getElementById('reset-game')
 
 /*----- event listeners -----*/
 cellElements.forEach(function(cell) {
-    cell.addEventListener('click', handleClick, {once: true})
+    cell.addEventListener('click', handleClick)
 })
 resetGame.addEventListener('click', clearBoard)
 
@@ -70,6 +70,7 @@ let switchTurns = function() {
 
 function clearBoard(e) {
     e.preventDefault()
-    document.querySelectorAll('.boxes').innerHTML = " ghvjh "
-    console.log('hello')
+    cellElements.forEach(function(cell) {
+        cell.innerHTML = ' '
+    })
 }
