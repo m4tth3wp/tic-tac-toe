@@ -85,7 +85,7 @@ function winnerCheck() {
     
     if (isWinningCombo) {
         let winner = true
-        messageBox.textContent = 'Player 1 is the Winner!'
+        messageBox.textContent = `Player ${pos0InnterText} is the winner!`
         cellElements.forEach(function(cell) {
             cell.removeEventListener('click', handleClick, {once: true})
         })
