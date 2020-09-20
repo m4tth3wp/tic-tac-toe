@@ -59,13 +59,13 @@ let placeChoice = function(cell, playerTurn) {
 let switchTurns = function() {
    if (playerOneTurn) {
         playerOneTurn = false
-        playerOne.style.backgroundColor = 'white'
+        playerOne.style.backgroundColor = 'wheat'
         playerTwo.style.backgroundColor = 'yellow'
     return
    } else {
        playerOneTurn = true
        playerOne.style.backgroundColor = 'yellow'
-       playerTwo.style.backgroundColor = 'white'
+       playerTwo.style.backgroundColor = 'wheat'
    }
 }
 
@@ -99,7 +99,8 @@ function clearBoard(e) {
         cell.innerHTML = ' '
         cell.classList.remove('X')
         cell.classList.remove('O')
-        playerOne.style.backgroundColor = 'white'
-        playerTwo.style.backgroundColor = 'white'
+        playerOne.style.backgroundColor = 'wheat'
+        playerTwo.style.backgroundColor = 'wheat'
+        messageBox.textContent = ''
     })
 }
