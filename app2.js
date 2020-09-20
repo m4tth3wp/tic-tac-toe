@@ -60,11 +60,11 @@ let switchTurns = function() {
    if (playerOneTurn) {
         playerOneTurn = false
         playerOne.style.backgroundColor = 'wheat'
-        playerTwo.style.backgroundColor = 'yellow'
+        playerTwo.style.backgroundColor = 'grey'
     return
    } else {
        playerOneTurn = true
-       playerOne.style.backgroundColor = 'yellow'
+       playerOne.style.backgroundColor = 'grey'
        playerTwo.style.backgroundColor = 'wheat'
    }
 }
@@ -102,5 +102,6 @@ function clearBoard(e) {
         playerOne.style.backgroundColor = 'wheat'
         playerTwo.style.backgroundColor = 'wheat'
         messageBox.textContent = ''
+        location.reload()
     })
 }

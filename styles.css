@@ -41,6 +41,7 @@ h2 {
     background-color: wheat;
     grid-area: player-one;
     justify-self: center;
+    border-radius: 25px;
 }
 
 .messages {
@@ -54,6 +55,7 @@ h2 {
     padding: 10px;
     grid-area: player-two;
     justify-self: center;
+    border-radius: 25px;
 }
 
 #reset-game {
@@ -67,6 +69,7 @@ h2 {
     display: grid;
     grid-area: board;
     background-color: black;
+    margin-top: 50px;
     width: 400px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px;
