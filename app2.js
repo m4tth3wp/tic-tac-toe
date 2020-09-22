@@ -13,10 +13,7 @@ const winningArrays = [
 ]
 
 /*----- app's state (variables) -----*/
-const pickedboxes = []
 let playerOneTurn= true
-let playerTwoTurn = false
-let gameFinished = false
 
 /*----- cached element references -----*/
 let cellElements = document.querySelectorAll('.boxes')
@@ -40,8 +37,7 @@ function handleClick(e) {
     e.preventDefault()
     placeChoice(cell, playerTurn)
     // check for win
-    winnerCheck()
-    // check for draw 
+    winnerCheck() 
     // switch turns
     switchTurns(playerTurn)
 }
